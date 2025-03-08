@@ -18,11 +18,12 @@
   --sh-jsxliterals: #6266d1;
   --sh-property: #e25a1c;
   --sh-entity: #e25a1c;
+  background-color: #ffffff;
 }
 
 /* Dark theme colors */
 .dark {
-  background-color: #121212;
+  background-color: #000000;
   --sh-class: #4c97f8;
   --sh-identifier: white;
   --sh-sign: #8996a3;

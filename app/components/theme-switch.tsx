@@ -92,7 +92,7 @@ export const ThemeSwitch: React.FC = () => {
           id="theme-toggle"
           aria-label={`Switch to ${currentTheme === "light" ? "dark" : "light"} mode`}
           onClick={toggleTheme}
-          className="flex items-center justify-center transition-opacity duration-300 hover:opacity-90"
+          className="flex items-center justify-center transition-opacity duration-300 hover:opacity-90 rounded-full bg-white/90 px-4 py-3.5 text-sm font-medium text-zinc-800 shadow-lg ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:dark:ring-zinc-600/50"
       >
         <FaCircleHalfStroke
             className={`h-[14px] w-[14px] ${currentTheme === "dark" ? "text-[#D4D4D4]" : "text-[#1c1c1c]"}`}
