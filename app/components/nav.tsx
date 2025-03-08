@@ -20,12 +20,13 @@ export function Navbar() {
             {/* Dynamic Navigation Bar (Centered) */}
             <nav className="flex items-center justify-center rounded-full bg-white/90 px-4 py-1.5 text-sm font-medium text-zinc-800 shadow-lg ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-zinc-600/50">
                 <div className="flex items-center gap-1">
-                    {/* Home Page Title Link with Active Highlight */}
+                    {/* Home Page Title Link with Obvious Active & Hover Colors */}
                     <Link
                         href="/"
-                        className={`transition px-3 py-1 rounded-full relative ${
-                            pathname === "/" ? "bg-zinc-300 dark:bg-zinc-700 text-black dark:text-white"
-                                : "hover:bg-zinc-200/50 dark:hover:bg-zinc-700/50"
+                        className={`transition px-2 py-1 ${
+                            pathname === "/"
+                                ? "text-rose-800 font-semibold dark:text-rose-400"  // Active page color (red in light, yellow in dark)
+                                : "hover:text-rose-900 dark:hover:text-rose-300"
                         }`}
                     >
                         {metaData.title}
@@ -35,10 +36,10 @@ export function Navbar() {
                         <Link
                             key={path}
                             href={path}
-                            className={`transition px-3 py-1 rounded-full relative ${
+                            className={`transition px-2 py-1 ${
                                 pathname === path
-                                    ? "bg-zinc-300 dark:bg-zinc-700 text-black dark:text-white" // Active Page (Fully Highlighted)
-                                    : "hover:bg-zinc-200/50 dark:hover:bg-zinc-700/50" // Faded Highlight on Hover
+                                    ? "text-rose-800 font-semibold dark:text-rose-400"  // Active page color persists
+                                    : "hover:text-rose-900 dark:hover:text-rose-300"
                             }`}
                         >
                             {name}
