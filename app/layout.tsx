@@ -74,25 +74,28 @@ export default function RootLayout({
           title="JSON Feed"
         />
       </head>
-      <body className="antialiased flex flex-col items-center justify-center w-[85%] min-h-screen mx-auto bg-zinc-100 dark:bg-zinc-900 border-l-[0.5px] border-r-[0.5px] border-zinc-600/50">
-        <div className="mx-auto mt-2 lg:mt-8 mb-20 lg:mb-40">
-          <ThemeProvider
-              attribute="class"
-              defaultTheme="system"
-              enableSystem
-              disableTransitionOnChange
-          >
-            <Navbar/>
-            <main
-                className="flex-auto min-w-0 pt-10 mt-2 md:mt-6 flex flex-col px-6 sm:px-4 md:px-0 max-w-[630px] w-full">
-              {children}
-              <Footer/>
-              <Analytics/>
-              <SpeedInsights/>
-            </main>
-          </ThemeProvider>
-        </div>
+      <body
+          className="antialiased flex flex-col items-center justify-center w-[85%] min-h-screen mx-auto bg-zinc-100 dark:bg-zinc-900 border-l-[0.5px] border-r-[0.5px] border-zinc-600/50">
+      <div className="fixed top-0 w-[85%] justify-center h-12 bg-zinc-100 dark:bg-zinc-900 z-0 border-l-[0.5px] border-r-[0.5px] border-zinc-600/50"></div>
+      <div className="mx-auto mt-2 lg:mt-8 mb-20 lg:mb-40 w-[85%]">
+        <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+        >
+          <Navbar/>
+          <main
+              className="flex-auto pt-10 mt-2 md:mt-6 flex flex-col px-6 sm:px-4 md:px-0 w-full min-h-screen">
+            {children}
+            <Footer/>
+            <Analytics/>
+            <SpeedInsights/>
+          </main>
+        </ThemeProvider>
+      </div>
+      <div className="fixed bottom-0 w-[85%] justify-center h-12 bg-zinc-100 dark:bg-zinc-900 z-0 border-l-[0.5px] border-r-[0.5px] border-zinc-600/50"></div>
       </body>
     </html>
-);
+  );
 }

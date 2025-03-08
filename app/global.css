@@ -37,7 +37,12 @@
 
 html {
   min-width: 360px;
+  height: 100%;
 }
+
+/*body {*/
+/*  height: 100%;*/
+/*}*/
 
 .prose {
   @apply text-[#000000] dark:text-[#FFFFFF];
