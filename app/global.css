@@ -46,6 +46,8 @@ html {
 
 .prose {
   @apply text-[#000000] dark:text-[#FFFFFF];
+  max-width: none; /* Remove the limit */
+  /*width: 100%; !* Ensure it takes up the available space *!*/
 }
 
 .prose .anchor {

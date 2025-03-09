@@ -10,7 +10,7 @@ export default function BlogPosts() {
   let allBlogs = getBlogPosts();
 
   return (
-    <section>
+    <section className="z-10">
       <h1 className="mb-8 text-2xl font-medium tracking-tight">Our Blog</h1>
       <div>
         {allBlogs
