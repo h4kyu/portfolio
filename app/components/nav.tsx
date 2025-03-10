@@ -7,7 +7,7 @@ import {metaData, socialLinks} from "../config";
 import Image from "next/image";
 
 const navItems = {
-    "/about": { name: "About" },
+    // "/about": { name: "About" },
     "/projects": { name: "Projects" },
     "/experience": { name: "Experience" },
     "/contact": { name: "Contact" },

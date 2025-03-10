@@ -1,8 +1,5 @@
-import Link from "next/link";
 import type { Metadata } from "next";
-import { projects } from "./project-data";
 import {socialLinks} from "../config";
-import {PiToolboxDuotone} from "react-icons/pi";
 import Image from "next/image";
 import {FiLink} from "react-icons/fi";
 
@@ -14,7 +11,7 @@ export const metadata: Metadata = {
 export default function Projects() {
   return (
       <section className="z-10">
-          <div className="grid grid-cols-12 gap-6 items-start pb-8">
+          <div className="grid grid-cols-12 gap-6 items-start">
               {/* Left column (text) - 4/8 */}
               <div className="col-span-8">
                   <h1 className="mb-6 text-5xl font-bold tracking-tight">
@@ -48,7 +45,7 @@ export default function Projects() {
               <div className="col-span-5 flex justify-center md:justify-end"></div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-0 gap-y-4 mt-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-0 gap-y-4">
               {/* Each of these is one card, directly in the grid */}
               <div
                   className="group relative rounded-xl p-6 transition-transform duration-150 ease-out hover:scale-[1.015] overflow-visible h-64">
