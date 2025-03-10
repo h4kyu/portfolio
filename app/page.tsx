@@ -201,8 +201,7 @@ export default function Page() {
 
         <div className="grid grid-cols-3 gap-0 mt-8">
           <div>
-            <div
-                className="group relative rounded-xl p-6 transition-transform duration-150 ease-out hover:scale-[1.015] overflow-visible h-64">
+            <div className="group relative rounded-xl p-6 transition-transform duration-150 ease-out hover:scale-[1.015] overflow-visible h-64">
               <a href="#">
                 {/* Background layer with less noticeable expansion */}
                 <div
@@ -269,8 +268,7 @@ export default function Page() {
             </div>
           </div>
           <div>
-            <div
-                className="group relative rounded-xl p-6 transition-transform duration-150 ease-out hover:scale-[1.015] overflow-visible h-64">
+            <div className="group relative rounded-xl p-6 transition-transform duration-150 ease-out hover:scale-[1.015] overflow-visible h-64">
               <a href="#">
                 {/* Background layer with less noticeable expansion */}
                 <div
@@ -337,8 +335,7 @@ export default function Page() {
             </div>
           </div>
           <div>
-            <div
-                className="group relative rounded-xl p-6 transition-transform duration-150 ease-out hover:scale-[1.015] overflow-visible h-64">
+            <div className="group relative rounded-xl p-6 transition-transform duration-150 ease-out hover:scale-[1.015] overflow-visible h-64">
               <a href="#">
                 {/* Background layer with less noticeable expansion */}
                 <div

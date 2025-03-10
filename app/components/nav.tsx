@@ -7,9 +7,10 @@ import {metaData, socialLinks} from "../config";
 import Image from "next/image";
 
 const navItems = {
-    "/blog": { name: "Blog" },
+    "/about": { name: "About" },
     "/projects": { name: "Projects" },
-    "/photos": { name: "Photos" },
+    "/experience": { name: "Experience" },
+    "/contact": { name: "Contact" },
     // More sections can be added dynamically
 };
 
