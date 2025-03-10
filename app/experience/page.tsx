@@ -45,7 +45,7 @@ export default function Experience() {
             </div>
 
 
-            <ol className="relative border-s-2 border-gray-200 dark:border-gray-700 max-w-[700px] pl-6">
+            <ol className="relative border-s border-zinc-900/15 dark:border-zinc-600/30 max-w-[700px] pl-6">
                 {/* Timeline Item 1 */}
                 <li className="relative mb-10">
                     <div className="relative group transition-transform duration-150 ease-out hover:scale-[1.01]">

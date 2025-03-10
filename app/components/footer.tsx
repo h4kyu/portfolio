@@ -15,7 +15,7 @@ const YEAR = new Date().getFullYear();
 
 function SocialLink({ href, icon: Icon }) {
   return (
-    <a href={href} target="_blank" rel="noopener noreferrer">
+    <a href={href} target="_blank" rel="noopener noreferrer" className="transition-opacity duration-300 hover:opacity-60">
       <Icon />
     </a>
   );
@@ -23,31 +23,20 @@ function SocialLink({ href, icon: Icon }) {
 
 function SocialLinks() {
   return (
-    <div className="flex text-lg gap-3.5 float-right transition-opacity duration-300 hover:opacity-90">
-      <SocialLink href={socialLinks.twitter} icon={FaXTwitter} />
-      <SocialLink href={socialLinks.github} icon={FaGithub} />
-      <SocialLink href={socialLinks.instagram} icon={FaInstagram} />
-      <SocialLink href={socialLinks.linkedin} icon={FaLinkedinIn} />
-      <SocialLink href={socialLinks.email} icon={TbMailFilled} />
-      <a href="/rss.xml" target="_self">
-        <FaRss />
-      </a>
+    <div className="flex text-lg gap-3.5 float-right text-zinc-300">
+        <SocialLink href={socialLinks.email} icon={TbMailFilled} />
+        <SocialLink href={socialLinks.github} icon={FaGithub} />
+        <SocialLink href={socialLinks.linkedin} icon={FaLinkedinIn} />
+        <SocialLink href={socialLinks.instagram} icon={FaInstagram} />
     </div>
   );
 }
 
 export default function Footer() {
   return (
-    <small className="block lg:mt-24 mt-16 text-[#1C1C1C] dark:text-[#D4D4D4] z-10 w-full pb-8">
+    <small className="block lg:mt-24 mt-16 text-gray-700 dark:text-gray-400 z-10 w-full pb-8">
       <time>© {YEAR}</time>{" "}
-      <a
-        className="no-underline"
-        href={socialLinks.twitter}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        {metaData.title}
-      </a>
+      Nahshon Weissberg.
       <style jsx>{`
         @media screen and (max-width: 480px) {
           article {
