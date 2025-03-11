@@ -12,8 +12,8 @@ import { metaData } from "./config";
 export const metadata: Metadata = {
   metadataBase: new URL(metaData.baseUrl),
   title: {
-    default: metaData.title,
-    template: `%s | ${metaData.title}`,
+    default: metaData.name,
+    template: `%s | ${metaData.name}`,
   },
   description: metaData.description,
   openGraph: {
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
   },
   icons: {
-    icon: "/favicon-32x32.png",
+    icon: "/mudkip.png",
   },
 };
 

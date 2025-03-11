@@ -23,7 +23,7 @@ export function Navbar() {
                 <Image
                     src="/profile.png"
                     alt="Profile photo"
-                    className="rounded-full grayscale hover:grayscale-0 w-11 h-11 p-1 ring-2 ring-zinc-300 dark:ring-zinc-700"
+                    className="rounded-full w-11 h-11 p-1 ring-2 ring-zinc-300 dark:ring-zinc-700"
                     unoptimized
                     width={40}
                     height={40}
