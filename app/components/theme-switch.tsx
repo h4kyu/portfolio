@@ -9,29 +9,24 @@ import { FaCircleHalfStroke } from "react-icons/fa6";
 const storageKey = "theme-preference";
 
 // ThemeProvider component
-export function ThemeProvider({ children }: { children: React.ReactNode }) {
+export function ThemeProvider(props: ThemeProviderProps) {
   const [mounted, setMounted] = React.useState(false);
 
   React.useEffect(() => {
-    // Ensures the component renders only after the theme is determined
     setMounted(true);
   }, []);
 
   if (!mounted) {
-    // Hide content until theme is mounted to prevent mismatches
-    return <div style={{ visibility: "hidden" }}>{children}</div>;
+    return <div style={{ visibility: "hidden" }}>{props.children}</div>;
   }
 
   return (
-    <NextThemesProvider
-      attribute="class"
-      defaultTheme="dark"
-      enableSystem={false}
-    >
-      {children}
-    </NextThemesProvider>
+      <NextThemesProvider {...props}>
+        {props.children}
+      </NextThemesProvider>
   );
 }
+
 
 // ThemeSwitch component
 export const ThemeSwitch: React.FC = () => {
