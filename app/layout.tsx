@@ -16,15 +16,15 @@ export const metadata: Metadata = {
     template: `%s | ${metaData.name}`,
   },
   description: metaData.description,
-  openGraph: {
-    images: metaData.ogImage,
-    title: metaData.title,
-    description: metaData.description,
-    url: metaData.baseUrl,
-    siteName: metaData.name,
-    locale: "en_US",
-    type: "website",
-  },
+  // openGraph: {
+  //   images: metaData.ogImage,
+  //   title: metaData.title,
+  //   description: metaData.description,
+  //   url: metaData.baseUrl,
+  //   siteName: metaData.name,
+  //   locale: "en_US",
+  //   type: "website",
+  // },
   robots: {
     index: true,
     follow: true,
@@ -36,10 +36,10 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  twitter: {
-    title: metaData.name,
-    card: "summary_large_image",
-  },
+  // twitter: {
+  //   title: metaData.name,
+  //   card: "summary_large_image",
+  // },
   icons: {
     icon: "/mudkip.png",
   },
@@ -55,24 +55,24 @@ export default function RootLayout({
   return (
     <html lang="en" className={cx(GeistSans.variable, GeistMono.variable)}>
       <head>
-        <link
-          rel="alternate"
-          type="application/rss+xml"
-          href="/rss.xml"
-          title="RSS Feed"
-        />
-        <link
-          rel="alternate"
-          type="application/atom+xml"
-          href="/atom.xml"
-          title="Atom Feed"
-        />
-        <link
-          rel="alternate"
-          type="application/feed+json"
-          href="/feed.json"
-          title="JSON Feed"
-        />
+        {/*<link*/}
+        {/*  rel="alternate"*/}
+        {/*  type="application/rss+xml"*/}
+        {/*  href="/rss.xml"*/}
+        {/*  title="RSS Feed"*/}
+        {/*/>*/}
+        {/*<link*/}
+        {/*  rel="alternate"*/}
+        {/*  type="application/atom+xml"*/}
+        {/*  href="/atom.xml"*/}
+        {/*  title="Atom Feed"*/}
+        {/*/>*/}
+        {/*<link*/}
+        {/*  rel="alternate"*/}
+        {/*  type="application/feed+json"*/}
+        {/*  href="/feed.json"*/}
+        {/*  title="JSON Feed"*/}
+        {/*/>*/}
       </head>
       <body className="antialiased flex flex-col items-center justify-start w-[85%] min-h-screen mx-auto bg-zinc-100 dark:bg-zinc-900 border-l-[0.5px] border-r-[0.5px] border-zinc-600/50">
         <div className="fixed top-0 w-[85%] justify-center h-32 bg-zinc-100 dark:bg-zinc-900 z-0 border-l-[0.5px] border-r-[0.5px] border-zinc-600/50"></div>
