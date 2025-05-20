@@ -122,6 +122,9 @@ export default function Page() {
                 {[
                   {src: "/tools/c.png", label: "C"},
                   {src: "/tools/cpp.png", label: "C++"},
+                  {src: "/tools/verilog.png", label: "Verilog"},
+                  {src: "/tools/kicad.png", label: "KiCAD"},
+                  {src: "/tools/pic.png", label: "PICs"},
                   {src: "/tools/freertos.png", label: "FreeRTOS"},
                   {src: "/tools/stm32.png", label: "STM32"},
                   {src: "/tools/ti.png", label: "RM46"},
@@ -228,6 +231,89 @@ export default function Page() {
 
         <div className="grid grid-cols-3 gap-0 mt-8">
           <div>
+
+            <div
+                className="group relative rounded-xl p-6 transition-transform duration-150 ease-out hover:scale-[1.015] overflow-visible max-h-[340px]">
+              <a
+                  href="https://github.com/waterloo-rocketry"
+                  target="_blank"
+              >
+                {/* Background layer with less noticeable expansion */}
+                <div
+                    className="absolute inset-0 scale-98 opacity-0 rounded-2xl bg-[#ededed] dark:bg-[#1f1f22] transition-all duration-150 ease-out group-hover:scale-100 group-hover:opacity-100 z-0"
+                ></div>
+
+                <div className="relative z-10">
+                  <div className="inline-flex items-center space-x-4">
+                    {/* Profile image with double ring */}
+                    <div
+                        className="inline-flex items-center justify-center rounded-full ring-1 ring-zinc-900/5 dark:ring-zinc-600/50 backdrop-blur p-2">
+                      <div className="rounded-full ring-[8px] ring-white/90 dark:ring-zinc-800/95">
+                        <Image
+                            src="/projects/rocketry.jpg"
+                            alt=""
+                            className="w-8 h-8 rounded-full"
+                            unoptimized
+                            width={8}
+                            height={8}
+                            priority
+                        />
+                      </div>
+                    </div>
+
+                    {/* Tool icons with peer-hover tooltip */}
+                    <div className="flex items-center space-x-4">
+                      {[
+                        {src: "/tools/c.png", label: "C"},
+                        {src: "/tools/kicad.png", label: "KiCAD"},
+                        {src: "/tools/pic.png", label: "PICs"},
+                      ].map((tool, i) => (
+                          <div key={i} className="relative">
+                            <img
+                                src={tool.src}
+                                alt=""
+                                className="peer w-7 h-7 p-0.5 rounded-full ring-2 ring-gray-300 dark:ring-gray-500 hover:scale-105 transition-transform"
+                            />
+                            <div
+                                className="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 z-10 opacity-0 invisible peer-hover:opacity-100 peer-hover:visible transition-opacity duration-300 px-2 py-1 text-xs font-medium text-black dark:text-white bg-zinc-100 dark:bg-zinc-700 rounded-lg whitespace-nowrap">
+                              {tool.label}
+                            </div>
+                          </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <h2 className="text-base text-zinc-800 dark:text-zinc-100 font-semibold mt-6">
+                    Waterloo Rocketry
+                  </h2>
+                  <p className="text-sm text-gray-700 dark:text-gray-400 mt-1">
+                    Electrical subsystem focusing on <span
+                      className="text-black dark:text-gray-300">C firmware</span> and <span
+                      className="text-black dark:text-gray-300">KiCAD </span>
+                    design + analysis that aligns with cross-functional requirements.
+
+                  </p>
+                  <p className="text-sm text-gray-700 dark:text-gray-400 mt-1">
+                    I'm currently writing Injector Sensor Hub firmware to handle healthchecks, sensor readings and <span
+                      className="text-black dark:text-gray-300">CAN </span>
+                    communication.
+                  </p>
+
+                  {/* Link row with hover effect */}
+                  <div className="flex items-center space-x-2 mt-4">
+                    <FiLink className="text-zinc-500 dark:text-zinc-400"/>
+                    <span
+                        className="text-sm font-medium text-zinc-700 dark:text-zinc-300 transition-colors duration-300 group-hover:text-teal-600 dark:group-hover:text-teal-400">
+                      github.com/waterloo-rocketry
+                    </span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+
+          <div>
             <div
                 className="group relative rounded-xl p-6 transition-transform duration-150 ease-out hover:scale-[1.015] overflow-visible max-h-[340px]">
               <a
@@ -241,7 +327,7 @@ export default function Page() {
 
                 <div className="relative z-10">
                   <div className="inline-flex items-center space-x-4">
-                  {/* Profile image with double ring */}
+                    {/* Profile image with double ring */}
                     <div
                         className="inline-flex items-center justify-center rounded-full ring-1 ring-zinc-900/5 dark:ring-zinc-600/50 backdrop-blur p-2">
                       <div className="rounded-full ring-[8px] ring-white/90 dark:ring-zinc-800/95">
@@ -307,7 +393,8 @@ export default function Page() {
             </div>
           </div>
           <div>
-            <div className="group relative rounded-xl p-6 transition-transform duration-150 ease-out hover:scale-[1.015] overflow-visible max-h-[340px]">
+            <div
+                className="group relative rounded-xl p-6 transition-transform duration-150 ease-out hover:scale-[1.015] overflow-visible max-h-[340px]">
               <a
                   href="https://drive.google.com/file/d/1ur8atBQIfAi-F2DCGxZ6B1qXduMdApll/view?usp=sharing"
                   target="_blank"
@@ -386,88 +473,91 @@ export default function Page() {
               </a>
             </div>
           </div>
-          <div>
-            <div className="group relative rounded-xl p-6 transition-transform duration-150 ease-out hover:scale-[1.015] overflow-visible max-h-[340px]">
-              <a
-                  href="https://github.com/AidanTjKo/ECE198"
-                  target="_blank"
-              >
-                {/* Background layer with less noticeable expansion */}
-                <div
-                    className="absolute inset-0 scale-98 opacity-0 rounded-2xl bg-[#ededed] dark:bg-[#1f1f22] transition-all duration-150 ease-out group-hover:scale-100 group-hover:opacity-100 z-0"
-                ></div>
-
-                <div className="relative z-10">
-                  <div className="inline-flex items-center space-x-4">
-                    {/* Profile image with double ring */}
-                    <div
-                        className="inline-flex items-center justify-center rounded-full ring-1 ring-zinc-900/5 dark:ring-zinc-600/50 backdrop-blur p-2">
-                      <div className="rounded-full ring-[8px] ring-white/90 dark:ring-zinc-800/95">
-                        <Image
-                            src="/projects/stm.jpg"
-                            alt=""
-                            className="w-8 h-8 rounded-full"
-                            unoptimized
-                            width={8}
-                            height={8}
-                            priority
-                        />
-                      </div>
-                    </div>
-
-                    {/* Tool icons with peer-hover tooltip */}
-                    <div className="flex items-center space-x-4">
-                      {[
-                        {src: "/tools/stm32.png", label: "STM32"},
-                        {src: "/tools/cpp.png", label: "C++"},
-                        {src: "/tools/soldering.png", label: "Soldering"},
-                        {src: "/tools/circuitDesign.jpg", label: "Circuit Design"},
-                      ].map((tool, i) => (
-                          <div key={i} className="relative">
-                            <img
-                                src={tool.src}
-                                alt=""
-                                className="peer w-7 h-7 p-0.5 rounded-full ring-2 ring-gray-300 dark:ring-gray-500 hover:scale-105 transition-transform"
-                            />
-                            <div
-                                className="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 z-10 opacity-0 invisible peer-hover:opacity-100 peer-hover:visible transition-opacity duration-300 px-2 py-1 text-xs font-medium text-black dark:text-white bg-zinc-100 dark:bg-zinc-700 rounded-lg whitespace-nowrap">
-                              {tool.label}
-                            </div>
-                          </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  <h2 className="text-base text-zinc-800 dark:text-zinc-100 font-semibold mt-6">
-                    Raised-Hand Detection System
-                  </h2>
-                  <p className="text-sm text-gray-700 dark:text-gray-400 mt-1">
-                    Developed real-time raised-hand detection in
-                    <span className="text-black dark:text-gray-300"> C++</span> with
-                    <span className="text-black dark:text-gray-300"> STM32</span> microcontrollers to enhance
-                    classroom participation.
-                  </p>
-                  <p className="text-sm text-gray-700 dark:text-gray-400 mt-1">
-                    Used
-                    <span className="text-black dark:text-gray-300"> HC-05</span> modules via the
-                    <span className="text-black dark:text-gray-300"> USART protocol</span>, achieving
-                    <span className="text-black dark:text-gray-300"> 80% accuracy</span> using edge detection
-                    and image subtraction algorithms.
-                  </p>
 
 
-                  {/* Link row with hover effect */}
-                  <div className="flex items-center space-x-2 mt-4">
-                    <FiLink className="text-zinc-500 dark:text-zinc-400"/>
-                    <span
-                        className="text-sm font-medium text-zinc-700 dark:text-zinc-300 transition-colors duration-300 group-hover:text-teal-600 dark:group-hover:text-teal-400">
-                      github.com/AidanTjKo/ECE198
-                    </span>
-                  </div>
-                </div>
-              </a>
-            </div>
-          </div>
+          {/*<div>*/}
+          {/*  <div*/}
+          {/*      className="group relative rounded-xl p-6 transition-transform duration-150 ease-out hover:scale-[1.015] overflow-visible max-h-[340px]">*/}
+          {/*    <a*/}
+          {/*        href="https://github.com/AidanTjKo/ECE198"*/}
+          {/*        target="_blank"*/}
+          {/*    >*/}
+          {/*      /!* Background layer with less noticeable expansion *!/*/}
+          {/*      <div*/}
+          {/*          className="absolute inset-0 scale-98 opacity-0 rounded-2xl bg-[#ededed] dark:bg-[#1f1f22] transition-all duration-150 ease-out group-hover:scale-100 group-hover:opacity-100 z-0"*/}
+          {/*      ></div>*/}
+
+          {/*      <div className="relative z-10">*/}
+          {/*        <div className="inline-flex items-center space-x-4">*/}
+          {/*          /!* Profile image with double ring *!/*/}
+          {/*          <div*/}
+          {/*              className="inline-flex items-center justify-center rounded-full ring-1 ring-zinc-900/5 dark:ring-zinc-600/50 backdrop-blur p-2">*/}
+          {/*            <div className="rounded-full ring-[8px] ring-white/90 dark:ring-zinc-800/95">*/}
+          {/*              <Image*/}
+          {/*                  src="/projects/stm.jpg"*/}
+          {/*                  alt=""*/}
+          {/*                  className="w-8 h-8 rounded-full"*/}
+          {/*                  unoptimized*/}
+          {/*                  width={8}*/}
+          {/*                  height={8}*/}
+          {/*                  priority*/}
+          {/*              />*/}
+          {/*            </div>*/}
+          {/*          </div>*/}
+
+          {/*          /!* Tool icons with peer-hover tooltip *!/*/}
+          {/*          <div className="flex items-center space-x-4">*/}
+          {/*            {[*/}
+          {/*              {src: "/tools/stm32.png", label: "STM32"},*/}
+          {/*              {src: "/tools/cpp.png", label: "C++"},*/}
+          {/*              {src: "/tools/soldering.png", label: "Soldering"},*/}
+          {/*              {src: "/tools/circuitDesign.jpg", label: "Circuit Design"},*/}
+          {/*            ].map((tool, i) => (*/}
+          {/*                <div key={i} className="relative">*/}
+          {/*                  <img*/}
+          {/*                      src={tool.src}*/}
+          {/*                      alt=""*/}
+          {/*                      className="peer w-7 h-7 p-0.5 rounded-full ring-2 ring-gray-300 dark:ring-gray-500 hover:scale-105 transition-transform"*/}
+          {/*                  />*/}
+          {/*                  <div*/}
+          {/*                      className="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 z-10 opacity-0 invisible peer-hover:opacity-100 peer-hover:visible transition-opacity duration-300 px-2 py-1 text-xs font-medium text-black dark:text-white bg-zinc-100 dark:bg-zinc-700 rounded-lg whitespace-nowrap">*/}
+          {/*                    {tool.label}*/}
+          {/*                  </div>*/}
+          {/*                </div>*/}
+          {/*            ))}*/}
+          {/*          </div>*/}
+          {/*        </div>*/}
+
+          {/*        <h2 className="text-base text-zinc-800 dark:text-zinc-100 font-semibold mt-6">*/}
+          {/*          Raised-Hand Detection System*/}
+          {/*        </h2>*/}
+          {/*        <p className="text-sm text-gray-700 dark:text-gray-400 mt-1">*/}
+          {/*          Developed real-time raised-hand detection in*/}
+          {/*          <span className="text-black dark:text-gray-300"> C++</span> with*/}
+          {/*          <span className="text-black dark:text-gray-300"> STM32</span> microcontrollers to enhance*/}
+          {/*          classroom participation.*/}
+          {/*        </p>*/}
+          {/*        <p className="text-sm text-gray-700 dark:text-gray-400 mt-1">*/}
+          {/*          Used*/}
+          {/*          <span className="text-black dark:text-gray-300"> HC-05</span> modules via the*/}
+          {/*          <span className="text-black dark:text-gray-300"> USART protocol</span>, achieving*/}
+          {/*          <span className="text-black dark:text-gray-300"> 80% accuracy</span> using edge detection*/}
+          {/*          and image subtraction algorithms.*/}
+          {/*        </p>*/}
+
+
+          {/*        /!* Link row with hover effect *!/*/}
+          {/*        <div className="flex items-center space-x-2 mt-4">*/}
+          {/*          <FiLink className="text-zinc-500 dark:text-zinc-400"/>*/}
+          {/*          <span*/}
+          {/*              className="text-sm font-medium text-zinc-700 dark:text-zinc-300 transition-colors duration-300 group-hover:text-teal-600 dark:group-hover:text-teal-400">*/}
+          {/*            github.com/AidanTjKo/ECE198*/}
+          {/*          </span>*/}
+          {/*        </div>*/}
+          {/*      </div>*/}
+          {/*    </a>*/}
+          {/*  </div>*/}
+          {/*</div>*/}
         </div>
 
         <div className="mt-6 ml-6">
