@@ -50,6 +50,89 @@ export default function Projects() {
               <div
                   className="group relative rounded-xl p-6 transition-transform duration-150 ease-out hover:scale-[1.015] overflow-visible max-h-[340px]">
                   <a
+                      href="https://github.com/h4kyu/verilog-conways-game-of-life"
+                      target="_blank"
+                  >
+                      {/* Background layer with less noticeable expansion */}
+                      <div
+                          className="absolute inset-0 scale-98 opacity-0 rounded-2xl bg-[#ededed] dark:bg-[#1f1f22] transition-all duration-150 ease-out group-hover:scale-100 group-hover:opacity-100 z-0"
+                      ></div>
+
+                      <div className="relative z-10">
+                          <div className="inline-flex items-center space-x-4">
+                              {/* Profile image with double ring */}
+                              <div
+                                  className="inline-flex items-center justify-center rounded-full ring-1 ring-zinc-900/5 dark:ring-zinc-600/50 backdrop-blur p-2">
+                                  <div className="rounded-full ring-[8px] ring-white/90 dark:ring-zinc-800/95">
+                                      <Image
+                                          src="/projects/glider.jpg"
+                                          alt=""
+                                          className="w-8 h-8 rounded-full"
+                                          unoptimized
+                                          width={8}
+                                          height={8}
+                                          priority
+                                      />
+                                  </div>
+                              </div>
+
+                              {/* Tool icons with peer-hover tooltip */}
+                              <div className="flex items-center space-x-4">
+                                  {[
+                                      {src: "/tools/verilog.png", label: "Verilog"},
+                                      {src: "/tools/cpp.png", label: "C++"},
+                                      {src: "/tools/python.png", label: "Python"},
+                                      {src: "/tools/matplotlib.png", label: "Matplotlib"},
+                                      {src: "/tools/gtkwave.png", label: "GTKWave"},
+                                      {src: "/tools/numpy.png", label: "NumPy"},
+                                  ].map((tool, i) => (
+                                      <div key={i} className="relative">
+                                          <img
+                                              src={tool.src}
+                                              alt=""
+                                              className="peer w-7 h-7 p-0.5 rounded-full ring-2 ring-gray-300 dark:ring-gray-500 hover:scale-105 transition-transform"
+                                          />
+                                          <div
+                                              className="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 z-10 opacity-0 invisible peer-hover:opacity-100 peer-hover:visible transition-opacity duration-300 px-2 py-1 text-xs font-medium text-black dark:text-white bg-zinc-100 dark:bg-zinc-700 rounded-lg whitespace-nowrap">
+                                              {tool.label}
+                                          </div>
+                                      </div>
+                                  ))}
+                              </div>
+                          </div>
+
+                          <h2 className="text-base text-zinc-800 dark:text-zinc-100 font-semibold mt-6">
+                              Verilog Game of Life
+                          </h2>
+                          <p className="text-sm text-gray-700 dark:text-gray-400 mt-1">
+                              Simulated Conway's Game of Life in <span className="text-black dark:text-gray-300">Verilog</span> using <span
+                              className="text-black dark:text-gray-300">sequential logic </span> for state updates,
+                              integrated with System C and Verilator.
+
+                          </p>
+                          <p className="text-sm text-gray-700 dark:text-gray-400 mt-1">
+                              Parsed <span className="text-black dark:text-gray-300">VCD </span> in <span
+                              className="text-black dark:text-gray-300">Python </span> and visualized state changes
+                              using <span className="text-black dark:text-gray-300">Matplotlib </span>, with <span
+                              className="text-black dark:text-gray-300">NumPy </span> for frame handling.
+                          </p>
+
+                          {/* Link row with hover effect */}
+                          <div className="flex items-center space-x-2 mt-4">
+                              <FiLink className="text-zinc-500 dark:text-zinc-400"/>
+                              <span
+                                  className="text-sm font-medium text-zinc-700 dark:text-zinc-300 transition-colors duration-300 group-hover:text-teal-600 dark:group-hover:text-teal-400">
+                      github.com/waterloo-rocketry
+                    </span>
+                          </div>
+                      </div>
+                  </a>
+              </div>
+
+
+              <div
+                  className="group relative rounded-xl p-6 transition-transform duration-150 ease-out hover:scale-[1.015] overflow-visible max-h-[340px]">
+                  <a
                       href="https://github.com/waterloo-rocketry"
                       target="_blank"
                   >
@@ -102,12 +185,14 @@ export default function Projects() {
                               Waterloo Rocketry
                           </h2>
                           <p className="text-sm text-gray-700 dark:text-gray-400 mt-1">
-                              Electrical subsystem focusing on <span className="text-black dark:text-gray-300">C firmware</span> and <span className="text-black dark:text-gray-300">KiCAD </span>
+                              Electrical subsystem focusing on <span className="text-black dark:text-gray-300">C firmware</span> and <span
+                              className="text-black dark:text-gray-300">KiCAD </span>
                               design + analysis that aligns with cross-functional requirements.
 
                           </p>
                           <p className="text-sm text-gray-700 dark:text-gray-400 mt-1">
-                              I'm currently writing Injector Sensor Hub firmware to handle healthchecks, sensor readings and <span className="text-black dark:text-gray-300">CAN </span>
+                              I'm currently writing Injector Sensor Hub firmware to handle healthchecks, sensor readings
+                              and <span className="text-black dark:text-gray-300">CAN </span>
                               communication.
                           </p>
 
