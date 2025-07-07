@@ -34,7 +34,7 @@ export default function Page() {
             <h1 className="mb-6 text-5xl font-bold tracking-tight">
               Hey there, I'm{" "}<br/>
               <span className="text-transparent bg-clip-text bg-gradient-to-r to-lime-600 from-amber-500">
-                Nahshon Weissberg
+                Nash Weissberg
               </span> !
             </h1>
             <div className="prose prose-neutral dark:prose-invert text-gray-500 dark:text-gray-400">
